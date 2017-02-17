@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Layers SVG image template</title>
+    <link rel="stylesheet" href="image-preview.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:300,400,700" rel="stylesheet">
+    <!-- <link href="image-preview.css" rel="stylesheet" > -->
+    <style>
+        #content {
+            width: 100%;
+            position: relative;
+            height: 100%;
+            text-align: center;
+            background-color: #F5F5F5;
+            font-family: "Oswald";
+        }
+
+        #content>.inside {
+            width: 100%;
+            position: relative;
+            height: 100%;
+        }
+
+        #content svg {
+            margin: auto;
+            max-width: 100%;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: none;
+            /* Konqueror */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                      not supported by any browser */
+            cursor: pointer;
+        }
+
+        #content .trigger_repos {
+            position: absolute;
+        }
+
+        #content #mouse_icon {
+            cursor: pointer;
+        }
+
+        #content #mover {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transition: all 500ms, height 500ms;
+            -moz-transition: all 500ms, height 500ms;
+            -ms-transition: all 500ms, height 500ms;
+            -o-transition: all 500ms, height 500ms;
+            transition: all 500ms, height 500ms;
+        }
+
+        #content .description {
+            font-font: 'Lato';
+            color: #ccc;
+        }
+
+        #content .full_img>image {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        /***** MASKS *********/
+
+        #mask-top_left,
+        #mask-top_right,
+        #mask-bottom_left,
+        #mask-bottom_right {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .mask>rect {
+            stroke: none;
+            fill: #ffffff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-transition: width 500ms, height 500ms;
+            -moz-transition: width 500ms, height 500ms;
+            -ms-transition: width 500ms, height 500ms;
+            -o-transition: width 500ms, height 500ms;
+            transition: width 500ms, height 500ms;
+        }
+
+        #mask-top_left>rect {
+            width: 50%;
+            height: 62%;
+        }
+
+        #mask-top_right>rect {
+            width: 100%;
+            height: 62%;
+        }
+
+        #mask-bottom_left>rect {
+            width: 50%;
+            height: 100%;
+        }
+
+        #mask-bottom_right>rect {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <body>
+
+        <!-- Generator: Gravit.io -->
+        <div id="content">
+            <div class="inside">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" width="760px" height="760px">
+            <defs>
+                <mask id="mask-top_left" class="mask" x="0" y="0" width="100%" height="100%">
+                    <rect />
+                </mask>
+                <mask id="mask-top_right" class="mask" x="0" y="0" width="100%" height="100%">
+                    <rect />
+                </mask>
+                <mask id="mask-bottom_left" class="mask" x="0" y="0" width="100%" height="100%">
+                    <rect />
+                </mask>
+                <mask id="mask-bottom_right" class="mask" x="0" y="0" width="100%" height="100%">
+                    <rect />
+                </mask>
+                <g id="image-bottom_right" class="full_img">
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe.jpg"/>
+                </g>
+                <g id="image-top_right" class="full_img">
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe-2.jpg"
+                           style=" mask: url(#mask-top_right);"/>
+                </g>
+                <g id="image-bottom_left" class="full_img">
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe-3.jpg"
+                           style=" mask: url(#mask-bottom_left);"/>
+                </g>
+                <g id="image-top_left" class="full_img">
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe-4.jpg"
+                           style=" mask: url(#mask-top_left);" />
+                </g>
+                <pattern id="mouse_icon" x="0%" y="0%" height="100%" width="100%"
+                         viewBox="0 0 20 20">
+                    <rect height="40" width="40" fill="#e0e0e0"/>
+                    <image x="5px" y="5px" width="10" height="10" xlink:href="images/Mouse-20.png"></image>
+                </pattern>
+            </defs>
+            <g>
+                <g id="g-bottom_right">
+                    <!-- <use x="0" y="0" xlink:href="#image-bottom_right" /> -->
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe.jpg" x="0%" y="0%" height="100%" width="100%"/>
+                </g>
+                <g id="g-top_right">
+                    <!-- <use x="0" y="0" xlink:href="#image-top_right" /> -->
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe-2.jpg" x="0%" y="0%" height="100%" width="100%" style=" mask: url(#mask-top_right);"/>
+                </g>
+                <g id="g-bottom_left">
+                    <!-- <use x="0" y="0" xlink:href="#image-bottom_left" /> -->
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe-3.jpg" x="0%" y="0%" height="100%" width="100%" style=" mask: url(#mask-bottom_left);"/>
+                </g>
+                <g id="g-top_left">
+                    <!-- <use x="0" y="0" xlink:href="#image-top_left" /> -->
+                    <image xlink:href="images/zoom-all-out-low-mens-running-shoe-4.jpg" x="0%" y="0%" height="100%" width="100%"style=" mask: url(#mask-top_left);"/>
+                </g>
+            </g>
+
+            <g>
+                <text x="50%" y="120" dx="-150px" font-size="36" style="font-style: italic;">
+                    4 in 1 IMAGE PREVIEW
+                </text>
+                <text x="50%" y="146" dx="-128px" font-size="18" style="font-style: italic;">
+                    Multiple Layers SVG image template
+                </text>
+                <text id="description" x="50%" y="240" dx="-92px" font-family="Lato" fill="#999999" font-size="16" style="">
+                    Click somewhere on image
+                </text>
+            </g>
+            <g>
+                <circle id='mover' cx="50%" cy="62%" r="24" fill="url(#mouse_icon)"/>
+            </g>
+
+        </svg>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="image-preview.js"></script>
+
+    </body>
+
+</html>
